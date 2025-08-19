@@ -8,7 +8,9 @@
       [class.active]="isPlaying"
       (click)="toggleMusic()"
       title="Toggle Music">
-      <span class="music-icon">{{ isPlaying ? '🎵' : '♪' }}</span>
+      <span class="music-icon" [class.playing]="isPlaying" [class.paused]="!isPlaying">
+        {{ isPlaying ? '⏸' : '▶' }}
+      </span>
     </button>
   </div>
 

@@ -34,6 +34,11 @@
     font-size: 1.2rem;
     color: #8b6914;
     transition: transform 0.3s ease;
+
+    &.playing,
+    &.paused {
+      color: #8b6914; /* Ensure consistent color for both states */
+    }
   }
 
   &:hover {
