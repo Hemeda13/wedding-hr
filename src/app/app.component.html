@@ -1,0 +1,111 @@
+<!-- Elegant Wedding Invitation -->
+<div class="wedding-invitation">
+
+  <!-- Music Control -->
+  <div class="music-control">
+    <button
+      class="music-btn"
+      [class.active]="isPlaying"
+      (click)="toggleMusic()"
+      title="Toggle Music">
+      <span class="music-icon">{{ isPlaying ? '🎵' : '♪' }}</span>
+    </button>
+  </div>
+
+  <!-- Autoplay Message -->
+  <div class="autoplay-message" *ngIf="showAutoplayPrompt" (click)="enableMusic()">
+    <div class="message-content">
+      <div class="message-icon">🎵</div>
+      <p class="message-text">Click anywhere to enjoy our wedding music</p>
+      <small class="message-subtitle">Your browser requires user interaction to play audio</small>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="ornament top-ornament">❦</div>
+    <div class="invitation-content">
+      <p class="invitation-text">You are invited to</p>
+      <h1 class="couple-names">
+        <span class="name">Hesham</span>
+        <span class="ampersand">&</span>
+        <span class="name">Rania</span>
+      </h1>
+      <p class="event-type">Wedding Celebration</p>
+      <div class="event-details">
+        <div class="detail-item">
+          <span class="detail-label">Date</span>
+          <span class="detail-value">September 11, 2025</span>
+        </div>
+        <div class="detail-item">
+          <span class="detail-label">Venue</span>
+          <span class="detail-value">Grand Hall Sohag at 8 p.m.</span>
+        </div>
+      </div>
+    </div>
+    <div class="ornament bottom-ornament">❦</div>
+  </section>
+
+  <!-- Photo Gallery Section -->
+  <section class="gallery-section">
+    <h2 class="section-title">Our Moments</h2>
+    <div class="photo-grid">
+      <div class="photo-card">
+        <img src="assets/pic1.jpeg" alt="Our Engagement" class="photo">
+        <div class="photo-overlay">
+          <div class="photo-caption">
+            <h3 class="caption-title">Our Engagement</h3>
+            <p class="caption-text">The moment we said yes to forever</p>
+          </div>
+        </div>
+      </div>
+      <div class="photo-card featured">
+        <img src="assets/pic2.jpeg" alt="Together Forever" class="photo">
+        <div class="photo-overlay">
+          <div class="photo-caption">
+            <h3 class="caption-title">Together Forever</h3>
+            <p class="caption-text">Two hearts, one love story</p>
+          </div>
+        </div>
+      </div>
+      <div class="photo-card">
+        <img src="assets/pic3.jpeg" alt="Our Love" class="photo">
+        <div class="photo-overlay">
+          <div class="photo-caption">
+            <h3 class="caption-title">Our Love</h3>
+            <p class="caption-text">Every moment is a blessing</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location Section -->
+  <section class="location-section">
+    <div class="location-content">
+      <h2 class="section-title">Join Us Here</h2>
+      <div class="map-wrapper">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14398.123456789!2d31.6948!3d26.5569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sGrand%20Hall%20Sohag!5e0!3m2!1sen!2seg!4v1234567890"
+          class="location-map"
+          allowfullscreen=""
+          loading="lazy">
+        </iframe>
+        <div class="map-overlay">
+          <p class="venue-name">Grand Hall Sohag</p>
+          <button class="directions-btn" (click)="openDirections()">
+            <span class="directions-icon">🧭</span>
+            Get Directions
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="invitation-footer">
+    <div class="footer-ornament">❦ ❦ ❦</div>
+    <p class="footer-text">We can't wait to celebrate with you</p>
+  </footer>
+
+</div>
